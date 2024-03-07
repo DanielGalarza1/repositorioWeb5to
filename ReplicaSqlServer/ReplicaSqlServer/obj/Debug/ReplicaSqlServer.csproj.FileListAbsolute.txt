@@ -1,0 +1,11 @@
+C:\Users\Daniel Galarza\source\repos\ReplicaSqlServer\ReplicaSqlServer\bin\Debug\ReplicaSqlServer.exe.config
+C:\Users\Daniel Galarza\source\repos\ReplicaSqlServer\ReplicaSqlServer\bin\Debug\ReplicaSqlServer.exe
+C:\Users\Daniel Galarza\source\repos\ReplicaSqlServer\ReplicaSqlServer\bin\Debug\ReplicaSqlServer.pdb
+C:\Users\Daniel Galarza\source\repos\ReplicaSqlServer\ReplicaSqlServer\obj\Debug\ReplicaSqlServer.csproj.AssemblyReference.cache
+C:\Users\Daniel Galarza\source\repos\ReplicaSqlServer\ReplicaSqlServer\obj\Debug\ReplicaSqlServer.csproj.SuggestedBindingRedirects.cache
+C:\Users\Daniel Galarza\source\repos\ReplicaSqlServer\ReplicaSqlServer\obj\Debug\ReplicaSqlServer.Properties.Resources.resources
+C:\Users\Daniel Galarza\source\repos\ReplicaSqlServer\ReplicaSqlServer\obj\Debug\ReplicaSqlServer.csproj.GenerateResource.cache
+C:\Users\Daniel Galarza\source\repos\ReplicaSqlServer\ReplicaSqlServer\obj\Debug\ReplicaSqlServer.csproj.CoreCompileInputs.cache
+C:\Users\Daniel Galarza\source\repos\ReplicaSqlServer\ReplicaSqlServer\obj\Debug\ReplicaSqlServer.exe
+C:\Users\Daniel Galarza\source\repos\ReplicaSqlServer\ReplicaSqlServer\obj\Debug\ReplicaSqlServer.pdb
+C:\Users\Daniel Galarza\source\repos\ReplicaSqlServer\ReplicaSqlServer\obj\Debug\ReplicaSqlServer.Form1.resources

@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AlarmasComunitariasModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Alarmas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CedulaUsuario" Type="nvarchar" MaxLength="10" />
+    <Property Name="FechaCreacion" Type="datetime" />
+    <Property Name="DescripcionPer" Type="int" />
+  </EntityType>
+  <EntityType Name="Descripciones">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="Sectores">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="Cedula" />
+    </Key>
+    <Property Name="Cedula" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Contraseña" Type="nvarchar" MaxLength="20" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="60" />
+    <Property Name="Apellido" Type="nvarchar" MaxLength="60" />
+    <Property Name="Telefono" Type="nvarchar" MaxLength="10" />
+    <Property Name="CallePrincipal" Type="nvarchar" MaxLength="50" />
+    <Property Name="CalleSecundaria" Type="nvarchar" MaxLength="50" />
+    <Property Name="Latitud" Type="decimal" Precision="9" Scale="6" />
+    <Property Name="Longitud" Type="decimal" Precision="9" Scale="6" />
+    <Property Name="PisoApartamento" Type="nvarchar" MaxLength="15" />
+    <Property Name="Sector" Type="nvarchar" MaxLength="50" />
+    <Property Name="RolPer" Type="int" />
+  </EntityType>
+  <Association Name="FK_Alarmas_Descripciones">
+    <End Role="Descripciones" Type="Self.Descripciones" Multiplicity="0..1" />
+    <End Role="Alarmas" Type="Self.Alarmas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Descripciones">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Alarmas">
+        <PropertyRef Name="DescripcionPer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Alarmas_Usuarios">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+    <End Role="Alarmas" Type="Self.Alarmas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="Cedula" />
+      </Principal>
+      <Dependent Role="Alarmas">
+        <PropertyRef Name="CedulaUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuarios_Roles">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="0..1" />
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Usuarios">
+        <PropertyRef Name="RolPer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AlarmasComunitariasModelStoreContainer">
+    <EntitySet Name="Alarmas" EntityType="Self.Alarmas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Descripciones" EntityType="Self.Descripciones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sectores" EntityType="Self.Sectores" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Alarmas_Descripciones" Association="Self.FK_Alarmas_Descripciones">
+      <End Role="Descripciones" EntitySet="Descripciones" />
+      <End Role="Alarmas" EntitySet="Alarmas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Alarmas_Usuarios" Association="Self.FK_Alarmas_Usuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Alarmas" EntitySet="Alarmas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuarios_Roles" Association="Self.FK_Usuarios_Roles">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Usuarios" EntitySet="Usuarios" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

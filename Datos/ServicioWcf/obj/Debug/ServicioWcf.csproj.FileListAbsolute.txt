@@ -1,0 +1,15 @@
+C:\Users\Daniel Galarza\source\repos\Datos\ServicioWcf\bin\ServicioWcf.dll.config
+C:\Users\Daniel Galarza\source\repos\Datos\ServicioWcf\bin\ServicioWcf.dll
+C:\Users\Daniel Galarza\source\repos\Datos\ServicioWcf\bin\ServicioWcf.pdb
+C:\Users\Daniel Galarza\source\repos\Datos\ServicioWcf\bin\Entidad.dll
+C:\Users\Daniel Galarza\source\repos\Datos\ServicioWcf\bin\Negocio.dll
+C:\Users\Daniel Galarza\source\repos\Datos\ServicioWcf\bin\Datos.dll
+C:\Users\Daniel Galarza\source\repos\Datos\ServicioWcf\bin\Entidad.pdb
+C:\Users\Daniel Galarza\source\repos\Datos\ServicioWcf\bin\Negocio.pdb
+C:\Users\Daniel Galarza\source\repos\Datos\ServicioWcf\bin\Datos.pdb
+C:\Users\Daniel Galarza\source\repos\Datos\ServicioWcf\bin\Datos.dll.config
+C:\Users\Daniel Galarza\source\repos\Datos\ServicioWcf\obj\Debug\ServicioWcf.csproj.AssemblyReference.cache
+C:\Users\Daniel Galarza\source\repos\Datos\ServicioWcf\obj\Debug\ServicioWcf.csproj.CoreCompileInputs.cache
+C:\Users\Daniel Galarza\source\repos\Datos\ServicioWcf\obj\Debug\ServicioWcf.csproj.CopyComplete
+C:\Users\Daniel Galarza\source\repos\Datos\ServicioWcf\obj\Debug\ServicioWcf.dll
+C:\Users\Daniel Galarza\source\repos\Datos\ServicioWcf\obj\Debug\ServicioWcf.pdb

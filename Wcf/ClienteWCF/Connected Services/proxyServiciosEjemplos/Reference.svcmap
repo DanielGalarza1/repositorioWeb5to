@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="b2d25a5e-898f-4b39-9ce8-0351b05ac72c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:57784/IServicioEjemplosWfc.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="IServicioEjemplosWfc.xsd" MetadataType="Schema" ID="adf8a819-80f9-4ef5-9fd1-e4a60e917794" SourceId="1" SourceUrl="http://localhost:57784/IServicioEjemplosWfc.svc?xsd=xsd0" />
+    <MetadataFile FileName="IServicioEjemplosWfc1.xsd" MetadataType="Schema" ID="1c538ac1-55ee-4b98-b953-af2b8e4dff1b" SourceId="1" SourceUrl="http://localhost:57784/IServicioEjemplosWfc.svc?xsd=xsd1" />
+    <MetadataFile FileName="IServicioEjemplosWfc2.xsd" MetadataType="Schema" ID="95691a03-b8cc-4d5f-b1ac-1360f94c13e6" SourceId="1" SourceUrl="http://localhost:57784/IServicioEjemplosWfc.svc?xsd=xsd2" />
+    <MetadataFile FileName="IServicioEjemplosWfc.disco" MetadataType="Disco" ID="38b9d993-fbb4-473b-b8e6-09202d1bf057" SourceId="1" SourceUrl="http://localhost:57784/IServicioEjemplosWfc.svc?disco" />
+    <MetadataFile FileName="IServicioEjemplosWfc.wsdl" MetadataType="Wsdl" ID="bc77eb2b-0230-406f-839a-7bbb1827a05f" SourceId="1" SourceUrl="http://localhost:57784/IServicioEjemplosWfc.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

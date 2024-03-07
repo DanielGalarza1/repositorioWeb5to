@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="IServicioEjemplosWfc" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:57784/IServicioEjemplosWfc.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:57784/IServicioEjemplosWfc.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:57784/IServicioEjemplosWfc.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IIServicioEjemplosWfc_Saludo_InputMessage">
+    <wsdl:part name="parameters" element="tns:Saludo" />
+  </wsdl:message>
+  <wsdl:message name="IIServicioEjemplosWfc_Saludo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaludoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIServicioEjemplosWfc_Potencia_InputMessage">
+    <wsdl:part name="parameters" element="tns:Potencia" />
+  </wsdl:message>
+  <wsdl:message name="IIServicioEjemplosWfc_Potencia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PotenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIServicioEjemplosWfc_RaizCuadrada_InputMessage">
+    <wsdl:part name="parameters" element="tns:RaizCuadrada" />
+  </wsdl:message>
+  <wsdl:message name="IIServicioEjemplosWfc_RaizCuadrada_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RaizCuadradaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIServicioEjemplosWfc_GenerarNumerosPares_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerarNumerosPares" />
+  </wsdl:message>
+  <wsdl:message name="IIServicioEjemplosWfc_GenerarNumerosPares_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerarNumerosParesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IIServicioEjemplosWfc">
+    <wsdl:operation name="Saludo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIServicioEjemplosWfc/Saludo" message="tns:IIServicioEjemplosWfc_Saludo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIServicioEjemplosWfc/SaludoResponse" message="tns:IIServicioEjemplosWfc_Saludo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Potencia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIServicioEjemplosWfc/Potencia" message="tns:IIServicioEjemplosWfc_Potencia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIServicioEjemplosWfc/PotenciaResponse" message="tns:IIServicioEjemplosWfc_Potencia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RaizCuadrada">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIServicioEjemplosWfc/RaizCuadrada" message="tns:IIServicioEjemplosWfc_RaizCuadrada_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIServicioEjemplosWfc/RaizCuadradaResponse" message="tns:IIServicioEjemplosWfc_RaizCuadrada_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerarNumerosPares">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIServicioEjemplosWfc/GenerarNumerosPares" message="tns:IIServicioEjemplosWfc_GenerarNumerosPares_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIServicioEjemplosWfc/GenerarNumerosParesResponse" message="tns:IIServicioEjemplosWfc_GenerarNumerosPares_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IIServicioEjemplosWfc" type="tns:IIServicioEjemplosWfc">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Saludo">
+      <soap:operation soapAction="http://tempuri.org/IIServicioEjemplosWfc/Saludo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Potencia">
+      <soap:operation soapAction="http://tempuri.org/IIServicioEjemplosWfc/Potencia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RaizCuadrada">
+      <soap:operation soapAction="http://tempuri.org/IIServicioEjemplosWfc/RaizCuadrada" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerarNumerosPares">
+      <soap:operation soapAction="http://tempuri.org/IIServicioEjemplosWfc/GenerarNumerosPares" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IServicioEjemplosWfc">
+    <wsdl:port name="BasicHttpBinding_IIServicioEjemplosWfc" binding="tns:BasicHttpBinding_IIServicioEjemplosWfc">
+      <soap:address location="http://localhost:57784/IServicioEjemplosWfc.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

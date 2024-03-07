@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AlarmasComunitariasModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Alarmas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CedulaUsuario" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="FechaCreacion" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="DescripcionPer" Type="Int32" />
+    <NavigationProperty Name="Descripciones" Relationship="Self.FK_Alarmas_Descripciones" FromRole="Alarmas" ToRole="Descripciones" />
+    <NavigationProperty Name="Usuarios" Relationship="Self.FK_Alarmas_Usuarios" FromRole="Alarmas" ToRole="Usuarios" />
+  </EntityType>
+  <EntityType Name="Descripciones">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Alarmas" Relationship="Self.FK_Alarmas_Descripciones" FromRole="Descripciones" ToRole="Alarmas" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Usuarios" Relationship="Self.FK_Usuarios_Roles" FromRole="Roles" ToRole="Usuarios" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="Cedula" />
+    </Key>
+    <Property Name="Cedula" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Contraseña" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Nombre" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="Apellido" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="Telefono" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="CallePrincipal" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CalleSecundaria" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Latitud" Type="Decimal" Precision="9" Scale="6" />
+    <Property Name="Longitud" Type="Decimal" Precision="9" Scale="6" />
+    <Property Name="PisoApartamento" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Sector" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RolPer" Type="Int32" />
+    <NavigationProperty Name="Alarmas" Relationship="Self.FK_Alarmas_Usuarios" FromRole="Usuarios" ToRole="Alarmas" />
+    <NavigationProperty Name="Roles" Relationship="Self.FK_Usuarios_Roles" FromRole="Usuarios" ToRole="Roles" />
+  </EntityType>
+  <Association Name="FK_Alarmas_Descripciones">
+    <End Role="Descripciones" Type="Self.Descripciones" Multiplicity="0..1" />
+    <End Role="Alarmas" Type="Self.Alarmas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Descripciones">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Alarmas">
+        <PropertyRef Name="DescripcionPer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Alarmas_Usuarios">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+    <End Role="Alarmas" Type="Self.Alarmas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="Cedula" />
+      </Principal>
+      <Dependent Role="Alarmas">
+        <PropertyRef Name="CedulaUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuarios_Roles">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="0..1" />
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Usuarios">
+        <PropertyRef Name="RolPer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AlarmasComunitariasEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Alarmas" EntityType="Self.Alarmas" />
+    <EntitySet Name="Descripciones" EntityType="Self.Descripciones" />
+    <EntitySet Name="Roles" EntityType="Self.Roles" />
+    <EntitySet Name="Usuarios" EntityType="Self.Usuarios" />
+    <AssociationSet Name="FK_Alarmas_Descripciones" Association="Self.FK_Alarmas_Descripciones">
+      <End Role="Descripciones" EntitySet="Descripciones" />
+      <End Role="Alarmas" EntitySet="Alarmas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Alarmas_Usuarios" Association="Self.FK_Alarmas_Usuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Alarmas" EntitySet="Alarmas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuarios_Roles" Association="Self.FK_Usuarios_Roles">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Usuarios" EntitySet="Usuarios" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

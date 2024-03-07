@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BaseMaps" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=BaseMaps.mssql.somee.com;Initial Catalog=BaseMaps;User ID=Alejo1001_SQLLogin_1" SettingsObjectName="Datos.Properties.Settings" SettingsPropertyName="BaseMapsConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.UBICACION" Member="UBICACION">
+    <Type Name="UBICACION">
+      <Column Name="IdNegocioCliente" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NombreCliente" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ApellidoCliente" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NombreNegocio" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TipoNegocio" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Direccion" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Latitud" Type="System.Decimal" DbType="Decimal(9,6)" CanBeNull="true" />
+      <Column Name="Longitud" Type="System.Decimal" DbType="Decimal(9,6)" CanBeNull="true" />
+      <Column Name="HorarioAtencion" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Telefono" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Descripcion" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

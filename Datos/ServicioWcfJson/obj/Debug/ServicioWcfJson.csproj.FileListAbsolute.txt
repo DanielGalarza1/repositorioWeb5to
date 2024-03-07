@@ -1,0 +1,15 @@
+C:\Users\Daniel Galarza\source\repos\Datos\ServicioWcfJson\bin\ServicioWcfJson.dll.config
+C:\Users\Daniel Galarza\source\repos\Datos\ServicioWcfJson\bin\ServicioWcfJson.dll
+C:\Users\Daniel Galarza\source\repos\Datos\ServicioWcfJson\bin\ServicioWcfJson.pdb
+C:\Users\Daniel Galarza\source\repos\Datos\ServicioWcfJson\bin\Entidad.dll
+C:\Users\Daniel Galarza\source\repos\Datos\ServicioWcfJson\bin\Negocio.dll
+C:\Users\Daniel Galarza\source\repos\Datos\ServicioWcfJson\bin\Datos.dll
+C:\Users\Daniel Galarza\source\repos\Datos\ServicioWcfJson\bin\Entidad.pdb
+C:\Users\Daniel Galarza\source\repos\Datos\ServicioWcfJson\bin\Negocio.pdb
+C:\Users\Daniel Galarza\source\repos\Datos\ServicioWcfJson\bin\Datos.pdb
+C:\Users\Daniel Galarza\source\repos\Datos\ServicioWcfJson\bin\Datos.dll.config
+C:\Users\Daniel Galarza\source\repos\Datos\ServicioWcfJson\obj\Debug\ServicioWcfJson.csproj.AssemblyReference.cache
+C:\Users\Daniel Galarza\source\repos\Datos\ServicioWcfJson\obj\Debug\ServicioWcfJson.csproj.CoreCompileInputs.cache
+C:\Users\Daniel Galarza\source\repos\Datos\ServicioWcfJson\obj\Debug\ServicioWcfJson.csproj.CopyComplete
+C:\Users\Daniel Galarza\source\repos\Datos\ServicioWcfJson\obj\Debug\ServicioWcfJson.dll
+C:\Users\Daniel Galarza\source\repos\Datos\ServicioWcfJson\obj\Debug\ServicioWcfJson.pdb

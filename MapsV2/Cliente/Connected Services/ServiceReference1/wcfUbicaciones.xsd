@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:55037/wcfUbicaciones.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Entidad" />
+  <xs:import schemaLocation="http://localhost:55037/wcfUbicaciones.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ServicioWCF" />
+  <xs:element name="DevolverUbicaciones">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DevolverUbicacionesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Entidad" minOccurs="0" name="DevolverUbicacionesResult" nillable="true" type="q1:ArrayOfUbicacionEntidad" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CrearUbicacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idNegocioCliente" type="xs:int" />
+        <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="apellido" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nombreNegocio" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tipoNegocio" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="direccion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="latitud" type="xs:decimal" />
+        <xs:element minOccurs="0" name="longitud" type="xs:decimal" />
+        <xs:element minOccurs="0" name="horario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="telefono" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="descripcion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CrearUbicacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ServicioWCF" minOccurs="0" name="CrearUbicacionResult" nillable="true" type="q2:Ubicacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

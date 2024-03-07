@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="AlarmasComunitariasModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Alarmas">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CedulaUsuario" Type="nvarchar" MaxLength="10" />
+          <Property Name="FechaCreacion" Type="datetime" />
+          <Property Name="DescripcionPer" Type="int" />
+        </EntityType>
+        <EntityType Name="Descripciones">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Descripcion" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Descripcion" Type="nvarchar" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="Usuarios">
+          <Key>
+            <PropertyRef Name="Cedula" />
+          </Key>
+          <Property Name="Cedula" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Contraseña" Type="nvarchar" MaxLength="20" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="60" />
+          <Property Name="Apellido" Type="nvarchar" MaxLength="60" />
+          <Property Name="Telefono" Type="nvarchar" MaxLength="10" />
+          <Property Name="CallePrincipal" Type="nvarchar" MaxLength="50" />
+          <Property Name="CalleSecundaria" Type="nvarchar" MaxLength="50" />
+          <Property Name="Latitud" Type="decimal" Precision="9" Scale="6" />
+          <Property Name="Longitud" Type="decimal" Precision="9" Scale="6" />
+          <Property Name="PisoApartamento" Type="nvarchar" MaxLength="15" />
+          <Property Name="Sector" Type="nvarchar" MaxLength="50" />
+          <Property Name="RolPer" Type="int" />
+          <Property Name="FormularioCompletado" Type="bit" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Alarmas_Descripciones">
+          <End Role="Descripciones" Type="Self.Descripciones" Multiplicity="0..1" />
+          <End Role="Alarmas" Type="Self.Alarmas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Descripciones">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Alarmas">
+              <PropertyRef Name="DescripcionPer" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Alarmas_Usuarios">
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+          <End Role="Alarmas" Type="Self.Alarmas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="Cedula" />
+            </Principal>
+            <Dependent Role="Alarmas">
+              <PropertyRef Name="CedulaUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Usuarios_Roles">
+          <End Role="Roles" Type="Self.Roles" Multiplicity="0..1" />
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Usuarios">
+              <PropertyRef Name="RolPer" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="GetViewAdminData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="VIEWADMIN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="ViewFechas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="ViewFechasSector" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="AlarmasComunitariasModelStoreContainer">
+          <EntitySet Name="Alarmas" EntityType="Self.Alarmas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Descripciones" EntityType="Self.Descripciones" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Alarmas_Descripciones" Association="Self.FK_Alarmas_Descripciones">
+            <End Role="Descripciones" EntitySet="Descripciones" />
+            <End Role="Alarmas" EntitySet="Alarmas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Alarmas_Usuarios" Association="Self.FK_Alarmas_Usuarios">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="Alarmas" EntitySet="Alarmas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Usuarios_Roles" Association="Self.FK_Usuarios_Roles">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="Usuarios" EntitySet="Usuarios" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AlarmasComunitariasModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Alarmas">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CedulaUsuario" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="FechaCreacion" Type="DateTime" Precision="3" />
+          <Property Name="DescripcionPer" Type="Int32" />
+          <NavigationProperty Name="Descripciones" Relationship="Self.FK_Alarmas_Descripciones" FromRole="Alarmas" ToRole="Descripciones" />
+          <NavigationProperty Name="Usuarios" Relationship="Self.FK_Alarmas_Usuarios" FromRole="Alarmas" ToRole="Usuarios" />
+        </EntityType>
+        <EntityType Name="Descripciones">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Descripcion" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Alarmas" Relationship="Self.FK_Alarmas_Descripciones" FromRole="Descripciones" ToRole="Alarmas" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Descripcion" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Usuarios" Relationship="Self.FK_Usuarios_Roles" FromRole="Roles" ToRole="Usuarios" />
+        </EntityType>
+        <EntityType Name="Usuarios">
+          <Key>
+            <PropertyRef Name="Cedula" />
+          </Key>
+          <Property Name="Cedula" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Contraseña" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Nombre" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="Apellido" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="Telefono" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="CallePrincipal" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CalleSecundaria" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Latitud" Type="Decimal" Precision="9" Scale="6" />
+          <Property Name="Longitud" Type="Decimal" Precision="9" Scale="6" />
+          <Property Name="PisoApartamento" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Sector" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RolPer" Type="Int32" />
+          <NavigationProperty Name="Alarmas" Relationship="Self.FK_Alarmas_Usuarios" FromRole="Usuarios" ToRole="Alarmas" />
+          <NavigationProperty Name="Roles" Relationship="Self.FK_Usuarios_Roles" FromRole="Usuarios" ToRole="Roles" />
+          <Property Name="FormularioCompletado" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Alarmas_Descripciones">
+          <End Role="Descripciones" Type="Self.Descripciones" Multiplicity="0..1" />
+          <End Role="Alarmas" Type="Self.Alarmas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Descripciones">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Alarmas">
+              <PropertyRef Name="DescripcionPer" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Alarmas_Usuarios">
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+          <End Role="Alarmas" Type="Self.Alarmas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="Cedula" />
+            </Principal>
+            <Dependent Role="Alarmas">
+              <PropertyRef Name="CedulaUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Usuarios_Roles">
+          <End Role="Roles" Type="Self.Roles" Multiplicity="0..1" />
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Usuarios">
+              <PropertyRef Name="RolPer" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AlarmasComunitariasEntities3" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Alarmas" EntityType="Self.Alarmas" />
+          <EntitySet Name="Descripciones" EntityType="Self.Descripciones" />
+          <EntitySet Name="Roles" EntityType="Self.Roles" />
+          <EntitySet Name="Usuarios" EntityType="Self.Usuarios" />
+          <AssociationSet Name="FK_Alarmas_Descripciones" Association="Self.FK_Alarmas_Descripciones">
+            <End Role="Descripciones" EntitySet="Descripciones" />
+            <End Role="Alarmas" EntitySet="Alarmas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Alarmas_Usuarios" Association="Self.FK_Alarmas_Usuarios">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="Alarmas" EntitySet="Alarmas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Usuarios_Roles" Association="Self.FK_Usuarios_Roles">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="Usuarios" EntitySet="Usuarios" />
+          </AssociationSet>
+          <FunctionImport Name="GetViewAdminData" ReturnType="Collection(AlarmasComunitariasModel.GetViewAdminData_Result)" />
+          <FunctionImport Name="VIEWADMIN" ReturnType="Collection(AlarmasComunitariasModel.VIEWADMIN_Result)" />
+          <FunctionImport Name="ViewFechas" ReturnType="Collection(AlarmasComunitariasModel.ViewFechas_Result)" />
+          <FunctionImport Name="ViewFechasSector" ReturnType="Collection(AlarmasComunitariasModel.ViewFechasSector_Result)" />
+        </EntityContainer>
+        <ComplexType Name="GetViewAdminData_Result">
+          <Property Type="String" Name="Sector" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="Cantidad" Nullable="true" />
+          <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="VIEWADMIN_Result">
+          <Property Type="String" Name="Sector" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="Cantidad" Nullable="true" />
+          <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="ViewFechas_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="DateTime" Name="FechaCreacion" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="DescripcionPer" Nullable="true" />
+          <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="ViewFechasSector_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="DateTime" Name="FechaCreacion" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="DescripcionPer" Nullable="true" />
+          <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Sector" Nullable="true" MaxLength="50" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AlarmasComunitariasModelStoreContainer" CdmEntityContainer="AlarmasComunitariasEntities3">
+          <EntitySetMapping Name="Alarmas">
+            <EntityTypeMapping TypeName="AlarmasComunitariasModel.Alarmas">
+              <MappingFragment StoreEntitySet="Alarmas">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CedulaUsuario" ColumnName="CedulaUsuario" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="DescripcionPer" ColumnName="DescripcionPer" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Descripciones">
+            <EntityTypeMapping TypeName="AlarmasComunitariasModel.Descripciones">
+              <MappingFragment StoreEntitySet="Descripciones">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="AlarmasComunitariasModel.Roles">
+              <MappingFragment StoreEntitySet="Roles">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Usuarios">
+            <EntityTypeMapping TypeName="AlarmasComunitariasModel.Usuarios">
+              <MappingFragment StoreEntitySet="Usuarios">
+                <ScalarProperty Name="FormularioCompletado" ColumnName="FormularioCompletado" />
+                <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+                <ScalarProperty Name="Contraseña" ColumnName="Contraseña" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="CallePrincipal" ColumnName="CallePrincipal" />
+                <ScalarProperty Name="CalleSecundaria" ColumnName="CalleSecundaria" />
+                <ScalarProperty Name="Latitud" ColumnName="Latitud" />
+                <ScalarProperty Name="Longitud" ColumnName="Longitud" />
+                <ScalarProperty Name="PisoApartamento" ColumnName="PisoApartamento" />
+                <ScalarProperty Name="Sector" ColumnName="Sector" />
+                <ScalarProperty Name="RolPer" ColumnName="RolPer" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="GetViewAdminData" FunctionName="AlarmasComunitariasModel.Store.GetViewAdminData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AlarmasComunitariasModel.GetViewAdminData_Result">
+                <ScalarProperty Name="Sector" ColumnName="Sector" />
+                <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="VIEWADMIN" FunctionName="AlarmasComunitariasModel.Store.VIEWADMIN">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AlarmasComunitariasModel.VIEWADMIN_Result">
+                <ScalarProperty Name="Sector" ColumnName="Sector" />
+                <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ViewFechas" FunctionName="AlarmasComunitariasModel.Store.ViewFechas">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AlarmasComunitariasModel.ViewFechas_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="DescripcionPer" ColumnName="DescripcionPer" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ViewFechasSector" FunctionName="AlarmasComunitariasModel.Store.ViewFechasSector">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AlarmasComunitariasModel.ViewFechasSector_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="DescripcionPer" ColumnName="DescripcionPer" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Sector" ColumnName="Sector" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

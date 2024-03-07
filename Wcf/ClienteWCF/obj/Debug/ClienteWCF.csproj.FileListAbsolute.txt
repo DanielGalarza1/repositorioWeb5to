@@ -1,0 +1,8 @@
+C:\Users\Daniel Galarza\source\repos\Wcf\ClienteWCF\bin\Debug\ClienteWCF.exe.config
+C:\Users\Daniel Galarza\source\repos\Wcf\ClienteWCF\bin\Debug\ClienteWCF.exe
+C:\Users\Daniel Galarza\source\repos\Wcf\ClienteWCF\bin\Debug\ClienteWCF.pdb
+C:\Users\Daniel Galarza\source\repos\Wcf\ClienteWCF\obj\Debug\ClienteWCF.csproj.AssemblyReference.cache
+C:\Users\Daniel Galarza\source\repos\Wcf\ClienteWCF\obj\Debug\ClienteWCF.csproj.SuggestedBindingRedirects.cache
+C:\Users\Daniel Galarza\source\repos\Wcf\ClienteWCF\obj\Debug\ClienteWCF.csproj.CoreCompileInputs.cache
+C:\Users\Daniel Galarza\source\repos\Wcf\ClienteWCF\obj\Debug\ClienteWCF.exe
+C:\Users\Daniel Galarza\source\repos\Wcf\ClienteWCF\obj\Debug\ClienteWCF.pdb

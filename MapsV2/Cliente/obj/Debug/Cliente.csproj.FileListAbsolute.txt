@@ -1,0 +1,12 @@
+C:\Users\Daniel Galarza\source\repos\MapsV2\Cliente\bin\Debug\Cliente.exe.config
+C:\Users\Daniel Galarza\source\repos\MapsV2\Cliente\bin\Debug\Cliente.exe
+C:\Users\Daniel Galarza\source\repos\MapsV2\Cliente\bin\Debug\Cliente.pdb
+C:\Users\Daniel Galarza\source\repos\MapsV2\Cliente\bin\Debug\ServicioUbicacion.dll
+C:\Users\Daniel Galarza\source\repos\MapsV2\Cliente\bin\Debug\ServicioUbicacion.pdb
+C:\Users\Daniel Galarza\source\repos\MapsV2\Cliente\bin\Debug\ServicioUbicacion.dll.config
+C:\Users\Daniel Galarza\source\repos\MapsV2\Cliente\obj\Debug\Cliente.csproj.AssemblyReference.cache
+C:\Users\Daniel Galarza\source\repos\MapsV2\Cliente\obj\Debug\Cliente.csproj.SuggestedBindingRedirects.cache
+C:\Users\Daniel Galarza\source\repos\MapsV2\Cliente\obj\Debug\Cliente.csproj.CoreCompileInputs.cache
+C:\Users\Daniel Galarza\source\repos\MapsV2\Cliente\obj\Debug\Cliente.csproj.CopyComplete
+C:\Users\Daniel Galarza\source\repos\MapsV2\Cliente\obj\Debug\Cliente.exe
+C:\Users\Daniel Galarza\source\repos\MapsV2\Cliente\obj\Debug\Cliente.pdb

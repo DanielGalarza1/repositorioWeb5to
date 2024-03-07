@@ -1,0 +1,12 @@
+C:\Users\Daniel Galarza\source\repos\Datos\Negocio\bin\Debug\Negocio.dll
+C:\Users\Daniel Galarza\source\repos\Datos\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Daniel Galarza\source\repos\Datos\Negocio\bin\Debug\Datos.dll
+C:\Users\Daniel Galarza\source\repos\Datos\Negocio\bin\Debug\Entidad.dll
+C:\Users\Daniel Galarza\source\repos\Datos\Negocio\bin\Debug\Datos.pdb
+C:\Users\Daniel Galarza\source\repos\Datos\Negocio\bin\Debug\Datos.dll.config
+C:\Users\Daniel Galarza\source\repos\Datos\Negocio\bin\Debug\Entidad.pdb
+C:\Users\Daniel Galarza\source\repos\Datos\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\Daniel Galarza\source\repos\Datos\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Daniel Galarza\source\repos\Datos\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\Daniel Galarza\source\repos\Datos\Negocio\obj\Debug\Negocio.dll
+C:\Users\Daniel Galarza\source\repos\Datos\Negocio\obj\Debug\Negocio.pdb

@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AlarmasComunitariasModelStoreContainer" CdmEntityContainer="AlarmasComunitariasEntities3">
+    <EntitySetMapping Name="Alarmas">
+      <EntityTypeMapping TypeName="AlarmasComunitariasModel.Alarmas">
+        <MappingFragment StoreEntitySet="Alarmas">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CedulaUsuario" ColumnName="CedulaUsuario" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="DescripcionPer" ColumnName="DescripcionPer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Descripciones">
+      <EntityTypeMapping TypeName="AlarmasComunitariasModel.Descripciones">
+        <MappingFragment StoreEntitySet="Descripciones">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="AlarmasComunitariasModel.Roles">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="AlarmasComunitariasModel.Usuarios">
+        <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="FormularioCompletado" ColumnName="FormularioCompletado" />
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="Contraseña" ColumnName="Contraseña" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="CallePrincipal" ColumnName="CallePrincipal" />
+          <ScalarProperty Name="CalleSecundaria" ColumnName="CalleSecundaria" />
+          <ScalarProperty Name="Latitud" ColumnName="Latitud" />
+          <ScalarProperty Name="Longitud" ColumnName="Longitud" />
+          <ScalarProperty Name="PisoApartamento" ColumnName="PisoApartamento" />
+          <ScalarProperty Name="Sector" ColumnName="Sector" />
+          <ScalarProperty Name="RolPer" ColumnName="RolPer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetViewAdminData" FunctionName="AlarmasComunitariasModel.Store.GetViewAdminData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AlarmasComunitariasModel.GetViewAdminData_Result">
+          <ScalarProperty Name="Sector" ColumnName="Sector" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="VIEWADMIN" FunctionName="AlarmasComunitariasModel.Store.VIEWADMIN">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AlarmasComunitariasModel.VIEWADMIN_Result">
+          <ScalarProperty Name="Sector" ColumnName="Sector" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ViewFechas" FunctionName="AlarmasComunitariasModel.Store.ViewFechas">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AlarmasComunitariasModel.ViewFechas_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="DescripcionPer" ColumnName="DescripcionPer" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ViewFechasSector" FunctionName="AlarmasComunitariasModel.Store.ViewFechasSector">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AlarmasComunitariasModel.ViewFechasSector_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="DescripcionPer" ColumnName="DescripcionPer" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Sector" ColumnName="Sector" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

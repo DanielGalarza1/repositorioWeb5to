@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="ca172922-5953-4254-91e3-79f105cbf59d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:55037/wcfUbicaciones.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="wcfUbicaciones.xsd" MetadataType="Schema" ID="9f712b40-7652-4c0c-b215-dca0e9cc9bd3" SourceId="1" SourceUrl="http://localhost:55037/wcfUbicaciones.svc?xsd=xsd0" />
+    <MetadataFile FileName="wcfUbicaciones1.xsd" MetadataType="Schema" ID="83e44744-4be4-440b-a650-d4ff5101a719" SourceId="1" SourceUrl="http://localhost:55037/wcfUbicaciones.svc?xsd=xsd3" />
+    <MetadataFile FileName="wcfUbicaciones.disco" MetadataType="Disco" ID="e23cc0a3-2fab-4222-81e4-7e169fb8942b" SourceId="1" SourceUrl="http://localhost:55037/wcfUbicaciones.svc?disco" />
+    <MetadataFile FileName="wcfUbicaciones2.xsd" MetadataType="Schema" ID="5fdc1e70-ced4-46ca-b8cc-57d28dfeb44c" SourceId="1" SourceUrl="http://localhost:55037/wcfUbicaciones.svc?xsd=xsd1" />
+    <MetadataFile FileName="wcfUbicaciones3.xsd" MetadataType="Schema" ID="1084afd6-dab0-4d43-a665-18b0d82b4950" SourceId="1" SourceUrl="http://localhost:55037/wcfUbicaciones.svc?xsd=xsd2" />
+    <MetadataFile FileName="wcfUbicaciones.wsdl" MetadataType="Wsdl" ID="b3de558e-f31d-441b-afcb-c9cef672442b" SourceId="1" SourceUrl="http://localhost:55037/wcfUbicaciones.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,6 @@
+C:\Users\Daniel Galarza\source\repos\ServicioWebProducto_DG\Entidades\bin\Release\Entidades.dll
+C:\Users\Daniel Galarza\source\repos\ServicioWebProducto_DG\Entidades\bin\Release\Entidades.pdb
+C:\Users\Daniel Galarza\source\repos\ServicioWebProducto_DG\Entidades\obj\Release\Entidades.csproj.AssemblyReference.cache
+C:\Users\Daniel Galarza\source\repos\ServicioWebProducto_DG\Entidades\obj\Release\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Daniel Galarza\source\repos\ServicioWebProducto_DG\Entidades\obj\Release\Entidades.dll
+C:\Users\Daniel Galarza\source\repos\ServicioWebProducto_DG\Entidades\obj\Release\Entidades.pdb

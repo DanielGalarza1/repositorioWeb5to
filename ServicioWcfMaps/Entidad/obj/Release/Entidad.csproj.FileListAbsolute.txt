@@ -1,0 +1,6 @@
+C:\Users\Daniel Galarza\source\repos\ServicioWcfMaps\Entidad\bin\Release\Entidad.dll
+C:\Users\Daniel Galarza\source\repos\ServicioWcfMaps\Entidad\bin\Release\Entidad.pdb
+C:\Users\Daniel Galarza\source\repos\ServicioWcfMaps\Entidad\obj\Release\Entidad.csproj.AssemblyReference.cache
+C:\Users\Daniel Galarza\source\repos\ServicioWcfMaps\Entidad\obj\Release\Entidad.csproj.CoreCompileInputs.cache
+C:\Users\Daniel Galarza\source\repos\ServicioWcfMaps\Entidad\obj\Release\Entidad.dll
+C:\Users\Daniel Galarza\source\repos\ServicioWcfMaps\Entidad\obj\Release\Entidad.pdb

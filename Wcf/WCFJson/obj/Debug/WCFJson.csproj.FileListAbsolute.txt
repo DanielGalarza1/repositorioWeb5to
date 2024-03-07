@@ -1,0 +1,7 @@
+C:\Users\Daniel Galarza\source\repos\Wcf\WCFJson\bin\WCFJson.dll.config
+C:\Users\Daniel Galarza\source\repos\Wcf\WCFJson\bin\WCFJson.dll
+C:\Users\Daniel Galarza\source\repos\Wcf\WCFJson\bin\WCFJson.pdb
+C:\Users\Daniel Galarza\source\repos\Wcf\WCFJson\obj\Debug\WCFJson.csproj.AssemblyReference.cache
+C:\Users\Daniel Galarza\source\repos\Wcf\WCFJson\obj\Debug\WCFJson.csproj.CoreCompileInputs.cache
+C:\Users\Daniel Galarza\source\repos\Wcf\WCFJson\obj\Debug\WCFJson.dll
+C:\Users\Daniel Galarza\source\repos\Wcf\WCFJson\obj\Debug\WCFJson.pdb

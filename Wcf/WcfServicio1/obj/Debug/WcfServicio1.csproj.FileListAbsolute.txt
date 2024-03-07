@@ -1,0 +1,7 @@
+C:\Users\Daniel Galarza\source\repos\Wcf\WcfServicio1\bin\WcfServicio1.dll.config
+C:\Users\Daniel Galarza\source\repos\Wcf\WcfServicio1\bin\WcfServicio1.dll
+C:\Users\Daniel Galarza\source\repos\Wcf\WcfServicio1\bin\WcfServicio1.pdb
+C:\Users\Daniel Galarza\source\repos\Wcf\WcfServicio1\obj\Debug\WcfServicio1.csproj.AssemblyReference.cache
+C:\Users\Daniel Galarza\source\repos\Wcf\WcfServicio1\obj\Debug\WcfServicio1.csproj.CoreCompileInputs.cache
+C:\Users\Daniel Galarza\source\repos\Wcf\WcfServicio1\obj\Debug\WcfServicio1.dll
+C:\Users\Daniel Galarza\source\repos\Wcf\WcfServicio1\obj\Debug\WcfServicio1.pdb

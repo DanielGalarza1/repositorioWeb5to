@@ -1,0 +1,12 @@
+C:\Users\Daniel Galarza\source\repos\ServicioWebProducto_DG\Negocio\bin\Release\Negocio.dll
+C:\Users\Daniel Galarza\source\repos\ServicioWebProducto_DG\Negocio\bin\Release\Negocio.pdb
+C:\Users\Daniel Galarza\source\repos\ServicioWebProducto_DG\Negocio\bin\Release\Datos.dll
+C:\Users\Daniel Galarza\source\repos\ServicioWebProducto_DG\Negocio\bin\Release\Entidades.dll
+C:\Users\Daniel Galarza\source\repos\ServicioWebProducto_DG\Negocio\bin\Release\Datos.pdb
+C:\Users\Daniel Galarza\source\repos\ServicioWebProducto_DG\Negocio\bin\Release\Datos.dll.config
+C:\Users\Daniel Galarza\source\repos\ServicioWebProducto_DG\Negocio\bin\Release\Entidades.pdb
+C:\Users\Daniel Galarza\source\repos\ServicioWebProducto_DG\Negocio\obj\Release\Negocio.csproj.AssemblyReference.cache
+C:\Users\Daniel Galarza\source\repos\ServicioWebProducto_DG\Negocio\obj\Release\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Daniel Galarza\source\repos\ServicioWebProducto_DG\Negocio\obj\Release\Negocio.csproj.CopyComplete
+C:\Users\Daniel Galarza\source\repos\ServicioWebProducto_DG\Negocio\obj\Release\Negocio.dll
+C:\Users\Daniel Galarza\source\repos\ServicioWebProducto_DG\Negocio\obj\Release\Negocio.pdb

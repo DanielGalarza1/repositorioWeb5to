@@ -1,0 +1,7 @@
+C:\Users\Daniel Galarza\source\repos\MapsV2\ServicioUbicacion\bin\ServicioUbicacion.dll.config
+C:\Users\Daniel Galarza\source\repos\MapsV2\ServicioUbicacion\bin\ServicioUbicacion.dll
+C:\Users\Daniel Galarza\source\repos\MapsV2\ServicioUbicacion\bin\ServicioUbicacion.pdb
+C:\Users\Daniel Galarza\source\repos\MapsV2\ServicioUbicacion\obj\Debug\ServicioUbicacion.csproj.AssemblyReference.cache
+C:\Users\Daniel Galarza\source\repos\MapsV2\ServicioUbicacion\obj\Debug\ServicioUbicacion.csproj.CoreCompileInputs.cache
+C:\Users\Daniel Galarza\source\repos\MapsV2\ServicioUbicacion\obj\Debug\ServicioUbicacion.dll
+C:\Users\Daniel Galarza\source\repos\MapsV2\ServicioUbicacion\obj\Debug\ServicioUbicacion.pdb

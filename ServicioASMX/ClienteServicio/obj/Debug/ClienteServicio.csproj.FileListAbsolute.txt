@@ -1,0 +1,8 @@
+C:\Users\Daniel Galarza\source\repos\ServicioASMX\ClienteServicio\bin\Debug\ClienteServicio.exe.config
+C:\Users\Daniel Galarza\source\repos\ServicioASMX\ClienteServicio\bin\Debug\ClienteServicio.exe
+C:\Users\Daniel Galarza\source\repos\ServicioASMX\ClienteServicio\bin\Debug\ClienteServicio.pdb
+C:\Users\Daniel Galarza\source\repos\ServicioASMX\ClienteServicio\obj\Debug\ClienteServicio.csproj.AssemblyReference.cache
+C:\Users\Daniel Galarza\source\repos\ServicioASMX\ClienteServicio\obj\Debug\ClienteServicio.csproj.SuggestedBindingRedirects.cache
+C:\Users\Daniel Galarza\source\repos\ServicioASMX\ClienteServicio\obj\Debug\ClienteServicio.csproj.CoreCompileInputs.cache
+C:\Users\Daniel Galarza\source\repos\ServicioASMX\ClienteServicio\obj\Debug\ClienteServicio.exe
+C:\Users\Daniel Galarza\source\repos\ServicioASMX\ClienteServicio\obj\Debug\ClienteServicio.pdb
